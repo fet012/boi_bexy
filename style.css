@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+} 
+
+.home-section {
+  background-image: url('images/pepe-cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  animation: background-switch 22s infinite;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  
+}
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 75, 0.8);
+}
+@keyframes background-switch {
+  0% {
+    background-image: url(images/ifeoma.jpg);
+  }
+  25% {
+    background-image: url(images/kachi.jpg);
+  }
+  50% {
+    background-image: url(images/logo.jpg);
+  }
+  75% {
+    background-image: url(images/meloddy.jpg);
+  }
+  100% {
+    background-image: url(images/pepe-cover.jpg);
+  }
+}
+header{
+  background-color: rgb(20, 20, 20);
+  border-radius: 24px;
+  margin-top: -9px;
+  padding: 5px;
+}
+h1 {
+  color: rgb(227, 225, 243);
+}
+
+
