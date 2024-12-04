@@ -1,20 +1,16 @@
-// const backgroundImages = [
-//   "images/ifeoma.jpg",
-//   "images/ifeoma.jpg",
-//   "images/logo.jpg",
-//   "images/meloddy.jpg",
-//   "images/pepe-cover.jpg",
-// ];
-// let currentIndex = 0;
-// setInterval(() => {
-//   const backgroundSlider = document.querySelector(".backgroundSlider");
-//   const newImage = document.createElement("img");
-//   newImage.src = backgroundImages[(currentIndex + 1) % backgroundImages.length];
-//   backgroundSlider.appendChild(newImage);
+const images = [
+    'images/ifeoma.jpg',
+    'images/kachi.jpg',
+    'images/logo.jpg',
+    'images/meloddy.jpg',
+    'images/pepe-cover.jpg'
+];
 
-//   setTimeout(() => {
-//     backgroundSlider.removeChild(backgroundSlider.children[0]);
-//   }, 10000);
+let currentIndex = 0;
 
-//   currentIndex = (currentIndex + 1) % backgroundImages.length;
-// }, 10000);
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.querySelector('.home-section').style.backgroundImage = `url(${images[currentIndex]})`;
+}
+
+setInterval(changeBackground, 5000);
