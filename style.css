@@ -31,13 +31,16 @@ a {
   0% {
     background-image: url(images/ifeoma.jpg);
   }
-  25% {
+  20% {
     background-image: url(images/kachi.jpg);
   }
-  50% {
+  40% {
     background-image: url(images/logo.jpg);
   }
-  75% {
+  60% {
+    background-image: url(images/gbe-misoke.jpg);
+  }
+  80% {
     background-image: url(images/meloddy.jpg);
   }
   100% {
@@ -64,7 +67,7 @@ a {
 }
 nav {
   position: absolute;
-  left: 70%;
+  left: 65%;
 }
 
 nav ul {
@@ -75,17 +78,18 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: blue; 
+  color: blue;
   font-size: 16px;
   position: relative;
   padding: 10px 15px;
   transition: color 0.3s ease, transform 0.3s ease;
   text-transform: uppercase;
+  border: 1px solid black;
 }
 
 nav ul li a:hover {
@@ -109,6 +113,59 @@ nav ul li a::before {
 nav ul li a:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* Make the hamburger icon lines white */
+.navbar-toggler-icon {
+  /* background-color: white;  */
+  width: 30px; /* Adjust size */
+  height: 22px; /* Adjust size */
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-left: 2pc;
+}
+
+/* Create the transition effect for changing to X */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: white;
+  width: 100%;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+/* Before line (top line) */
+.navbar-toggler-icon::before {
+  top: 0;
+}
+
+/* After line (bottom line) */
+.navbar-toggler-icon::after {
+  top: 18px;
+}
+
+/* Middle line (the one that disappears) */
+.navbar-toggler-icon span {
+  top: 8px;
+}
+
+/* When the menu is active, transform the hamburger to X */
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon span {
+  opacity: 0;
 }
 
 .main-content {
@@ -135,14 +192,14 @@ nav ul li a:hover::before {
   top: 0;
   width: 100%;
   height: 100%;
-  color: #f70606; 
+  color: #f70606;
   overflow: hidden;
   clip-path: inset(0 0 40% 0);
   z-index: -1;
 }
 
 .song-title::after {
-  color: #13f04a; 
+  color: #13f04a;
   clip-path: inset(50% 0 0 0);
 }
 
@@ -184,14 +241,13 @@ nav ul li a:hover::before {
   }
 }
 
+.song-content {
+  margin-top: -1.5pc;
+}
+
 .icons {
   display: flex;
   justify-content: center;
   gap: 5px;
   cursor: pointer;
-}
-
-.home-pic {
-  width: 300px;
-  mix-blend-mode: multiply;
 }
