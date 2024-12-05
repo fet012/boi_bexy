@@ -1,21 +1,22 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
 }
 a {
   text-decoration: none;
-} 
+}
 
 .home-section {
-  background-image: url('images/pepe-cover.jpg');
+  background-image: url("images/pepe-cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
-  animation: background-switch 22s infinite;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  
+  animation: background-switch 20s infinite alternate;
+  font-family: "Roboto", sans-serif;
+  position: relative;
 }
+
 .home-section::before {
   content: "";
   position: absolute;
@@ -25,6 +26,7 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 75, 0.9);
 }
+
 @keyframes background-switch {
   0% {
     background-image: url(images/ifeoma.jpg);
@@ -43,83 +45,153 @@ a {
   }
 }
 
-h1 {
-  color: rgb(227, 225, 243);
-}
-
- */
-
-
- * {
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-
-.home-section {
-  background-image: url('images/pepe-cover.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  animation: background-switch 22s infinite;
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-}
-
-.home-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 75, 0.9);
-}
-
-@keyframes background-switch {
-  0% { background-image: url(images/ifeoma.jpg); }
-  25% { background-image: url(images/kachi.jpg); }
-  50% { background-image: url(images/logo.jpg); }
-  75% { background-image: url(images/meloddy.jpg); }
-  100% { background-image: url(images/pepe-cover.jpg); }
-}
-
 .logo {
   color: rgb(227, 225, 243);
   font-size: 2.5rem;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-  animation: glow 1s infinite alternate;
-  font-family:cursive;
+  animation: glow 1.5s infinite alternate;
+  font-weight: 800;
+  font-family: cursive;
 }
 
 @keyframes glow {
-  0% { text-shadow: 0 0 20px rgba(230, 228, 228, 0.8); }
-  100% { text-shadow: 0 0 30px rgba(255, 255, 255, 1); }
+  0% {
+    text-shadow: 0 0 15px rgba(223, 221, 221, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 40px rgba(255, 255, 255, 1);
+  }
+}
+nav {
+  position: absolute;
+  left: 70%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: blue; 
+  font-size: 16px;
+  position: relative;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(248, 244, 244);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .main-content {
   position: relative;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  color: white;
+  color: #fff;
 }
 
 .song-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  position: relative;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  transition: background-color 0.3s;
+.song-title::before,
+.song-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #f70606; 
+  overflow: hidden;
+  clip-path: inset(0 0 40% 0);
+  z-index: -1;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
+.song-title::after {
+  color: #13f04a; 
+  clip-path: inset(50% 0 0 0);
+}
+
+.song-title::before {
+  animation: glitch1 0.3s steps(2, end) infinite;
+}
+
+.song-title::after {
+  animation: glitch2 0.3s steps(2, end) infinite;
+}
+
+@keyframes glitch1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-3px, -3px);
+  }
+  66% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(2px, -2px);
+  }
+  66% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.home-pic {
+  width: 300px;
+  mix-blend-mode: multiply;
 }
