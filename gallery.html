@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boi-Bexy | Gallery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="d-flex px-3">
+      <div style="position: absolute">
+        <h1 class="logo"><b>Boi-Bexy</b></h1>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="navbarToggleBtn"
+          >
+            <div class="custom-hamburger">
+              <div class="line top"></div>
+              <div class="line middle"></div>
+              <div class="line bottom"></div>
+            </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-1 mt-2 navbar-items">
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="index.html"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#"><b>Music</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#"><b>Gallery</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#"><b>Tour</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="gallery-container">
+
+      <div class="gallery">
+        <div class="image" data-id="1"><img src="images/gbe-misoke.jpg" alt="Image 1"></div>
+        <div class="image" data-id="2"><img src="images/ifeoma.jpg" alt="Image 2"></div>
+        <div class="image" data-id="3"><img src="images/kachi.jpg" alt="Image 3"></div>
+        <div class="image" data-id="4"><img src="images/meloddy.jpg" alt="Image 4"></div>
+        <div class="image" data-id="5"><img src="images/pepe-cover.jpg" alt="Image 5"></div>
+      </div>
+      <div class="lightbox">
+        <div class="lightbox-content">
+          <span class="close-btn">&times;</span>
+          <img src="" alt="" class="lightbox-img">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
