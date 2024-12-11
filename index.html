@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boi-bexy official website. Visit for the latest news, tour dates, browse the photo gallery, listen to Boi-Bexy's music and watch videos."
+    />
+    <meta
+      name="keywords"
+      content="Boi-bexy, Boi-Bexy News, Boi-Bexy music, Nwuzor Benedict, Fet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -45,7 +54,7 @@
                   <a class="nav-link text-primary" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-primary" href="#">About</a>
+                  <a class="nav-link text-primary" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-primary" href="#">Music</a>
@@ -180,72 +189,79 @@
       </div>
     </div>
 
-    <section class="hero">
-      <div class="container text-center">
-        <h1 class="display-3 text-white">Welcome to Boi-bexy's World</h1>
+    <div class="about-section" id="home">
+      <div class="text-content text-center">
+        <div class="glitch-container">
+          <div class="glitch-text" data-text="Boi-Bexy">Boi-Bexy</div>
+        </div>
         <p class="lead text-white">
           Experience the music, the journey, and the vibes!
         </p>
 
         <!-- Carousel -->
-        <div class="carousel-container">
-          <div id="carouselExample" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="images/profile-pic.jpg"
-                  class="d-block w-100"
-                  alt="First slide"
-                />
-              </div>
-              <div class="carousel-item">
-                <!-- <img
-                  src="images/video2.jpg"
-                  class="d-block w-100"
-                  alt="Second slide"
-                /> -->
-              </div>
-              <div class="carousel-item">
-                <!-- <img
-                  src="images/video3.jpg"
-                  class="d-block w-100"
-                  alt="Third slide"
-                /> -->
-              </div>
+        <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video
+              class="d-block w-100 video-gray"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source src="images/vid1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Melody performance</h5>
+              <p></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <video
+              class="d-block w-100 video-gray"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source src="images/vid2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>IGbe mi soke performance</h5>
+              <p>Meet the creative genius, now in HD!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <video
+              class="d-block w-100 video-gray"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source src="videos/meloddy-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Meloddy</h5>
+              <p>Harmony captured in motion.</p>
             </div>
           </div>
         </div>
-
-        <div class="social-icons">
-          <a href="https://twitter.com/BoiBexy" target="_blank">
-            <img
-              src="images/twitter-icon.svg"
-              alt="Twitter"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://instagram.com/BoiBexy" target="_blank">
-            <img
-              src="images/instagram-icon.svg"
-              alt="Instagram"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://facebook.com/BoiBexy" target="_blank">
-            <img
-              src="images/facebook-icon.svg"
-              alt="Facebook"
-              class="social-icon"
-            />
-          </a>
-        </div>
       </div>
-    </section>
+            </div>
+    </div>
 
-    <!-- About Section -->
     <section class="about text-center" id="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About</h2>
         <div class="row justify-content-center">
           <div class="col-md-4">
             <div class="profile-container">
@@ -254,6 +270,29 @@
                 class="profile-img"
                 alt="Boi-bexy"
               />
+            </div>
+            <div class="social-icons">
+              <a href="https://twitter.com/BoiBexy" target="_blank">
+                <img
+                  src="images/twitter-icon.svg"
+                  alt="Twitter"
+                  class="social-icon"
+                />
+              </a>
+              <a href="https://instagram.com/BoiBexy" target="_blank">
+                <img
+                  src="images/instagram-icon.svg"
+                  alt="Instagram"
+                  class="social-icon"
+                />
+              </a>
+              <a href="https://facebook.com/BoiBexy" target="_blank">
+                <img
+                  src="images/facebook-icon.svg"
+                  alt="Facebook"
+                  class="social-icon"
+                />
+              </a>
             </div>
           </div>
           <div class="col-md-7">

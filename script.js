@@ -1,4 +1,4 @@
-alert("SCRIPT JS");
+alert("Fet");
 
 // NAVBAR DROP
 document.addEventListener("DOMContentLoaded", () => {
