@@ -23,16 +23,20 @@ toggleButton.addEventListener("click", function () {
   navbarCollapse.classList.toggle("show");
 });
 
+
 // SMOOTH SCROLL
 const scrollSections = document.querySelectorAll(".scroll-section");
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
+
   scrollSections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
+
+    // Check if section is in the viewport
     if (
-      scrollPosition >= sectionTop - 600 &&
+      scrollPosition >= sectionTop - window.innerHeight + 200 &&
       scrollPosition < sectionTop + sectionHeight
     ) {
       section.classList.add("visible");

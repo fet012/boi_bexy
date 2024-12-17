@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -297,7 +301,6 @@ nav ul li a:hover::before {
   align-items: center;
   text-align: center;
   padding: 5px;
-
 }
 
 .about-section h1 {
@@ -347,26 +350,18 @@ nav ul li a:hover::before {
   object-fit: cover; /* Maintain aspect ratio */
 }
 
-
 /* Social Icons Styling */
 .social-icons {
   margin-top: 30px;
-}
-
-.social-icon {
-  width: 40px;
-  margin: 0 15px;
-  transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.2);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
 /* About Section */
 .about {
   padding: 80px 0;
-  background-color: #1e1e1e;
+  background-color: #020346;
 }
 
 .section-title {
@@ -377,8 +372,8 @@ nav ul li a:hover::before {
 }
 
 .profile-container {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   margin: 0 auto;
   position: relative;
   border-radius: 50%;
@@ -393,6 +388,7 @@ nav ul li a:hover::before {
   object-fit: cover;
   border-radius: 50%;
   transition: transform 0.5s ease;
+  cursor: pointer;
 }
 
 .profile-container:hover {
@@ -518,4 +514,235 @@ nav ul li a:hover::before {
   50% {
     opacity: 0.9;
   }
+}
+
+.scroll-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Hidden hover box */
+.icon-container .hover-box {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #e0f0e6;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  padding: 5px 6px;
+  white-space: nowrap;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Icon inside hover box */
+.hover-box .icon {
+  margin-left: 0;
+}
+
+/* Hover Text */
+.hover-box .icon-text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  color: green;
+  margin-right: 10px;
+}
+
+/* Hover Effect */
+.icon-container:hover .hover-box {
+  transform: translateY(-50%) scaleX(1);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 1);
+}
+
+.icon-container:hover .hover-box .icon-text {
+  opacity: 1; /* Fade in text */
+}
+
+.icon-container:hover .icon {
+  fill: white; /* Change standalone icon color */
+}
+
+.icon-container1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Hidden hover box */
+.icon-container1 .hover-box1 {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #373837;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  padding: 5px 6px;
+  white-space: nowrap;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Icon inside hover box */
+.hover-box1 .icon {
+  margin-left: 0;
+}
+
+/* Hover Text */
+.hover-box1 .icon-text1 {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  color: rgb(252, 252, 252);
+  margin-right: 10px;
+}
+
+/* Hover Effect */
+.icon-container1:hover .hover-box1 {
+  transform: translateY(-50%) scaleX(1);
+  box-shadow: 0 0 20px rgb(231, 238, 233);
+}
+
+.icon-container1:hover .hover-box1 .icon-text1 {
+  opacity: 1; /* Fade in text */
+}
+
+.icon-container1:hover .icon {
+  fill: white; /* Change standalone icon color */
+}
+
+.icon-container2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Hidden hover box */
+.icon-container2 .hover-box2 {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fdfdfd;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(250, 19, 181, 0.8);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  padding: 5px 6px;
+  white-space: nowrap;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Icon inside hover box */
+.hover-box2 .icon {
+  margin-left: 0;
+}
+
+/* Hover Text */
+.hover-box2 .icon-text2 {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  color: #ec007a;
+  margin-right: 10px;
+}
+
+/* Hover Effect */
+.icon-container2:hover .hover-box2 {
+  transform: translateY(-50%) scaleX(1);
+  box-shadow: 0 0 20px rgb(231, 238, 233);
+}
+
+.icon-container2:hover .hover-box2 .icon-text2 {
+  opacity: 1; /* Fade in text */
+}
+
+.icon-containe2:hover .icon {
+  fill: white;
+}
+
+.icon-container3 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Hidden hover box */
+.icon-container3 .hover-box3 {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fdfdfd;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(23, 9, 223, 0.8);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  padding: 5px 6px;
+  white-space: nowrap;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Icon inside hover box */
+.hover-box3 .icon {
+  margin-left: 0;
+}
+
+/* Hover Text */
+.hover-box3 .icon-text3 {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  color: #108ae4;
+  margin-right: 10px;
+}
+
+/* Hover Effect */
+.icon-container3:hover .hover-box3 {
+  transform: translateY(-50%) scaleX(1);
+  box-shadow: 0 0 20px rgb(231, 238, 233);
+}
+
+.icon-container3:hover .hover-box3 .icon-text3 {
+  opacity: 1; /* Fade in text */
+}
+
+.icon-container3:hover .icon {
+  fill: white;
 }
