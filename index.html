@@ -9,7 +9,7 @@
     />
     <meta
       name="keywords"
-      content="Boi-bexy, Boi-Bexy News, Boi-Bexy music, Nwuzor Benedict, Fet"
+      content="Boi-bexy, Boi-Bexy News, Boi-Bexy music, Nwuzor Benedict, Fet, Falola Temidayo, Kachi"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@500&display=swap"
@@ -22,7 +22,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style-index.css" />
+    <link rel="stylesheet" href="CSS/animation.css" />
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
     <title>Boi-Bexy</title>
   </head>
@@ -202,13 +204,13 @@
 
           <!-- Carousel -->
           <div
-            id="carouselExampleSlidesOnly"
+            id="carouselExample"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="3000"
+            data-bs-interval="false"
           >
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item active" id="slide-1">
                 <video
                   class="d-block w-100 video-gray"
                   autoplay
@@ -220,11 +222,10 @@
                   Your browser does not support the video tag.
                 </video>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Melody performance</h5>
-                  <p></p>
+                  <h5>Melody Performance</h5>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" id="slide-2">
                 <video
                   class="d-block w-100 video-gray"
                   autoplay
@@ -236,27 +237,34 @@
                   Your browser does not support the video tag.
                 </video>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Gbe mi soke performance</h5>
-                  <p>Meet the creative genius, now in HD!</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <video
-                  class="d-block w-100 video-gray"
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                >
-                  <source src="images/bbexy.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Gbe mi soke performance</h5>
-                  <p>Meet the creative genius, now in HD!</p>
+                  <h5>Another Performance</h5>
                 </div>
               </div>
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
@@ -633,10 +641,7 @@
           </div>
           <div class="col-md-7">
             <p class="bio">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
-              lorem sit amet purus dictum pharetra. Quisque volutpat, felis
-              vitae condimentum bibendum, justo purus vestibulum urna, sit amet
-              venenatis velit enim vitae elit.
+              I'm an artist, Ui/Ux designer and product developer
             </p>
           </div>
         </div>
@@ -650,14 +655,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.5/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="script.js"></script>
-    <script src="animation-index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/animation-index.js"></script>
   </body>
 </html>
-
-
-<!-- connection circles
-untools.ai
-eisenhower matrix
-iceberg model
-abstraction laddering -->

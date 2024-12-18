@@ -1,4 +1,4 @@
-alert("Fet");
+alert("Ifeoma coming out soon");
 
 // NAVBAR DROP
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,20 +23,16 @@ toggleButton.addEventListener("click", function () {
   navbarCollapse.classList.toggle("show");
 });
 
-
 // SMOOTH SCROLL
 const scrollSections = document.querySelectorAll(".scroll-section");
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
-
   scrollSections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
-
-    // Check if section is in the viewport
     if (
-      scrollPosition >= sectionTop - window.innerHeight + 200 &&
+      scrollPosition >= sectionTop - 800 &&
       scrollPosition < sectionTop + sectionHeight
     ) {
       section.classList.add("visible");
@@ -44,4 +40,26 @@ window.addEventListener("scroll", () => {
       section.classList.remove("visible");
     }
   });
+});
+
+
+document.querySelectorAll("a.nav-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    gsap.to(window, { scrollTo: e.target.getAttribute("href"), duration: 1 });
+  });
+});
+
+
+gsap.from(".about-section", {
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top bottom",
+    end: "center center",
+    scrub: true,
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
 });

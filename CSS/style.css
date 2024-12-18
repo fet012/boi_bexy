@@ -1,0 +1,405 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #020346;
+}
+
+
+.scroll-section {
+  opacity: 0 !important;
+  transform: translateY(350px) !important;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out !important;
+}
+
+.scroll-section.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.home-section {
+  background-image: url("/boi_bexy/images/pepe-cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  animation: background-switch 20s infinite alternate;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 75, 0.9);
+}
+
+
+
+.logo {
+  color: rgb(227, 225, 243);
+  font-size: 2.5rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation: glow 1.5s infinite alternate;
+  font-weight: 800;
+  font-family: cursive;
+  margin-left: 1pc;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 0px;
+  }
+}
+
+
+
+.navbar-toggler {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  display: none;
+  border: none;
+}
+.custom-hamburger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  margin-left: 3pc;
+}
+
+.custom-hamburger .line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.custom-hamburger .top {
+  top: 0;
+}
+
+.custom-hamburger .middle {
+  top: 8px;
+}
+
+.custom-hamburger .bottom {
+  top: 16px;
+}
+
+.navbar-toggler.collapsed .custom-hamburger .top {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.navbar-toggler.collapsed .custom-hamburger .middle {
+  opacity: 0;
+}
+
+.navbar-toggler.collapsed .custom-hamburger .bottom {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+nav {
+  position: absolute;
+  left: 65%;
+  margin-top: -8px;
+}
+@media (max-width: 768px) {
+  nav {
+    margin-top: 5px;
+  }
+}
+
+header {
+  padding: 15px 10px 0px 10px;
+  margin-top: -0.5pc;
+  transition: background-color 0.8s ease, position 0.8s ease;
+}
+
+.scrolled {
+  background-color: #020346;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  padding: 0px 0px 10px 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0000ff;
+  font-size: 16px;
+  position: relative;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid black;
+}
+
+nav ul li a:hover {
+  color: white !important;
+  transform: scale(1.2);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.main-content {
+  position: relative;
+
+  color: #fff;
+}
+
+.song-title {
+  position: relative;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+}
+
+.song-title::before,
+.song-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #f70606;
+  overflow: hidden;
+  clip-path: inset(0 0 40% 0);
+  z-index: -1;
+}
+
+.song-title::after {
+  color: #13f04a;
+  clip-path: inset(50% 0 0 0);
+}
+
+.song-title::before {
+  animation: glitch1 0.3s steps(2, end) infinite;
+}
+
+.song-title::after {
+  animation: glitch2 0.3s steps(2, end) infinite;
+}
+
+
+
+.song-content {
+  margin-top: -1.5pc;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.advert-section {
+  position: relative;
+  transform: translateY(-50%);
+  top: 45%;
+}
+
+.about-section {
+  position: relative;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.about-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.text-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel-container {
+  width: 100%;
+  height: 40%;
+  margin: 0 auto;
+  filter: grayscale(70%);
+}
+
+.pp {
+  height: 30pc;
+  width: 80%;
+}
+
+.carousel-inner {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+  border-radius: 10px;
+}
+
+.video-gray {
+  filter: grayscale(100%);
+  height: 80vh; 
+  object-fit: cover; 
+}
+
+
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background-color: #020346;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #f5a623;
+  margin-bottom: 40px;
+}
+
+.profile-container {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.profile-container:hover {
+  transform: scale(1.1);
+}
+
+.profile-container:hover .profile-img {
+  transform: scale(1.05);
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: #bbb;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-section p {
+    font-size: 1.1rem;
+  }
+
+  .carousel-container {
+    width: 90%;
+  }
+
+  .profile-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+.scroll-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

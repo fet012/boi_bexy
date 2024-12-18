@@ -1,0 +1,266 @@
+.glitch-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .glitch-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: glitch-flicker 1.2s infinite;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    overflow: hidden;
+  }
+  
+  .glitch-text::before {
+    color: #ff004c; /* Vibrant Red */
+    z-index: -1;
+    transform: translate(3px, -3px) skewX(-5deg);
+    clip-path: polygon(10% 0, 90% 0, 90% 45%, 10% 50%);
+    animation: glitch-animation-1 1.5s infinite linear alternate;
+  }
+  
+  .glitch-text::after {
+    color: #00ffff; /* Neon Cyan */
+    z-index: -1;
+    transform: translate(-3px, 3px) skewX(5deg);
+    clip-path: polygon(10% 50%, 90% 45%, 90% 100%, 10% 100%);
+    animation: glitch-animation-2 1.3s infinite linear alternate-reverse;
+  }
+  
+  
+
+
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Hidden hover box */
+  .icon-container .hover-box {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #e0f0e6;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    padding: 5px 6px;
+    white-space: nowrap;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Icon inside hover box */
+  .hover-box .icon {
+    margin-left: 0;
+  }
+  
+  /* Hover Text */
+  .hover-box .icon-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+    color: green;
+    margin-right: 10px;
+  }
+  
+  /* Hover Effect */
+  .icon-container:hover .hover-box {
+    transform: translateY(-50%) scaleX(1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 1);
+  }
+  
+  .icon-container:hover .hover-box .icon-text {
+    opacity: 1; /* Fade in text */
+  }
+  
+  .icon-container:hover .icon {
+    fill: white; /* Change standalone icon color */
+  }
+  
+  .icon-container1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Hidden hover box */
+  .icon-container1 .hover-box1 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #373837;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    padding: 5px 6px;
+    white-space: nowrap;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Icon inside hover box */
+  .hover-box1 .icon {
+    margin-left: 0;
+  }
+  
+  /* Hover Text */
+  .hover-box1 .icon-text1 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+    color: rgb(252, 252, 252);
+    margin-right: 10px;
+  }
+  
+  /* Hover Effect */
+  .icon-container1:hover .hover-box1 {
+    transform: translateY(-50%) scaleX(1);
+    box-shadow: 0 0 20px rgb(231, 238, 233);
+  }
+  
+  .icon-container1:hover .hover-box1 .icon-text1 {
+    opacity: 1; /* Fade in text */
+  }
+  
+  .icon-container1:hover .icon {
+    fill: white; /* Change standalone icon color */
+  }
+  
+  .icon-container2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Hidden hover box */
+  .icon-container2 .hover-box2 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #fdfdfd;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(250, 19, 181, 0.8);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    padding: 5px 6px;
+    white-space: nowrap;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Icon inside hover box */
+  .hover-box2 .icon {
+    margin-left: 0;
+  }
+  
+  /* Hover Text */
+  .hover-box2 .icon-text2 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+    color: #ec007a;
+    margin-right: 10px;
+  }
+  
+  /* Hover Effect */
+  .icon-container2:hover .hover-box2 {
+    transform: translateY(-50%) scaleX(1);
+    box-shadow: 0 0 20px rgb(231, 238, 233);
+  }
+  
+  .icon-container2:hover .hover-box2 .icon-text2 {
+    opacity: 1; /* Fade in text */
+  }
+  
+  .icon-containe2:hover .icon {
+    fill: white;
+  }
+  
+  .icon-container3 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Hidden hover box */
+  .icon-container3 .hover-box3 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #fdfdfd;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(23, 9, 223, 0.8);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    padding: 5px 6px;
+    white-space: nowrap;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Icon inside hover box */
+  .hover-box3 .icon {
+    margin-left: 0;
+  }
+  
+  /* Hover Text */
+  .hover-box3 .icon-text3 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+    color: #108ae4;
+    margin-right: 10px;
+  }
+  
+  /* Hover Effect */
+  .icon-container3:hover .hover-box3 {
+    transform: translateY(-50%) scaleX(1);
+    box-shadow: 0 0 20px rgb(231, 238, 233);
+  }
+  
+  .icon-container3:hover .hover-box3 .icon-text3 {
+    opacity: 1; /* Fade in text */
+  }
+  
+  .icon-container3:hover .icon {
+    fill: white;
+  }
