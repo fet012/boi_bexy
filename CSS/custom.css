@@ -1,98 +1,93 @@
 body {
   margin: 0;
-  background-color: #19133f;
+  background-color: #020457;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
+}
+
+.music-container {
+  position: relative;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.music {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.music-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.music-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.music-image:hover img {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  position: relative;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .music {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .music-image {
+    width: 80%; 
+    margin-bottom: 10px; 
+  }
 }
 
 
-
-
-
-
-.gallery-container {
-    position: relative;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-
-  .image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .image:hover img {
-    transform: scale(1.1);
-    transition: 0.5s ease-in-out;
-  }
-  
-
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .lightbox-content {
-    position: relative;
-  }
-  
-  .lightbox-img {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center align the images */
-    }
-  
-    .image {
-      width: 80%; /* Adjust the width of images for smaller screens */
-      margin-bottom: 20px; /* Add some space between the images */
-    }
-  }

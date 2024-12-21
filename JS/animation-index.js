@@ -69,29 +69,6 @@ document.querySelector(".profile-img").addEventListener("mouseleave", () => {
   gsap.to(".profile-img", { scale: 1, rotate: 0, duration: 0.3 });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Select carousel
-  const carousel = document.querySelector("#carouselExample");
-
-  // Listen for the 'slide.bs.carousel' event
-  carousel.addEventListener("slide.bs.carousel", (e) => {
-    const currentSlide = e.relatedTarget; // The incoming slide
-    const allSlides = document.querySelectorAll(".carousel-item");
-
-    // Fade out all slides (for smoother effect)
-    allSlides.forEach((slide) => {
-      gsap.set(slide, { opacity: 0, scale: 0.9 });
-    });
-
-    // Animate the new active slide
-    gsap.to(currentSlide, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power2.out",
-    });
-  });
-});
 
 gsap.from(".song-title", {
   duration: 1.5,

@@ -59,12 +59,10 @@
                   <a class="nav-link text-primary" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-primary" href="#">Music</a>
+                  <a class="nav-link text-primary" href="#music">Music</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-primary" href="gallery.html"
-                    >Gallery</a
-                  >
+                  <a class="nav-link text-primary" href="#gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-primary" href="#">Tour</a>
@@ -203,14 +201,15 @@
           </p>
 
           <!-- Carousel -->
+          <!-- Carousel -->
           <div
-            id="carouselExample"
+            id="carouselExampleSlidesOnly"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="false"
+            data-bs-interval="3000"
           >
             <div class="carousel-inner">
-              <div class="carousel-item active" id="slide-1">
+              <div class="carousel-item active">
                 <video
                   class="d-block w-100 video-gray"
                   autoplay
@@ -222,10 +221,11 @@
                   Your browser does not support the video tag.
                 </video>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Melody Performance</h5>
+                  <h5>Melody performance</h5>
+                  <p></p>
                 </div>
               </div>
-              <div class="carousel-item" id="slide-2">
+              <div class="carousel-item">
                 <video
                   class="d-block w-100 video-gray"
                   autoplay
@@ -237,34 +237,27 @@
                   Your browser does not support the video tag.
                 </video>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Another Performance</h5>
+                  <h5>Gbe mi soke performance</h5>
+                  <p>Meet the creative genius, now in HD!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <video
+                  class="d-block w-100 video-gray"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="images/bbexy.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Gbe mi soke performance</h5>
+                  <p>Meet the creative genius, now in HD!</p>
                 </div>
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
@@ -648,6 +641,84 @@
       </div>
     </section>
 
+    <section class="scroll-section" id="gallery">
+      <div class="glitch-container music-section" id="gallery-section">
+        <div class="glitch-text" data-text="GALLERY">GALLERY</div>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery">
+          <div
+            class="gallery-item"
+            data-type="image"
+            data-src="/boi_bexy/images/gbe-misoke.jpg"
+          >
+            <img src="/boi_bexy/images/gbe-misoke.jpg" alt="Gallery Image 1" />
+          </div>
+          <div
+            class="gallery-item"
+            data-type="video"
+            data-src="/boi_bexy/images/vid1.mp4"
+          >
+            <video src="/boi_bexy/images/vid1.mp4" muted></video>
+          </div>
+          <div
+            class="gallery-item"
+            data-type="image"
+            data-src="/boi_bexy/images/profile-pic.jpg"
+          >
+            <img src="/boi_bexy/images/profile-pic.jpg" alt="Gallery Image 2" />
+          </div>
+          <div
+            class="gallery-item"
+            data-type="image"
+            data-src="/boi_bexy/images/profile-pic.jpg"
+          >
+            <img src="/boi_bexy/images/profile-pic.jpg" alt="Gallery Image 2" />
+          </div>
+          <div
+            class="gallery-item"
+            data-type="image"
+            data-src="/boi_bexy/images/profile-pic.jpg"
+          >
+            <img src="/boi_bexy/images/profile-pic.jpg" alt="Gallery Image 2" />
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-overlay">
+        <div class="popup-content">
+          <button class="popup-close">X</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section" id="music">
+      <div class="music-container">
+        <div class="music">
+          <div class="music-image" data-id="1">
+            <img src="images/gbe-misoke.jpg" alt="Image 1" />
+          </div>
+          <div class="music-image" data-id="2">
+            <img src="images/ifeoma.jpg" alt="Image 2" />
+          </div>
+          <div class="music-image" data-id="3">
+            <img src="images/kachi.jpg" alt="Image 3" />
+          </div>
+          <div class="music-image" data-id="4">
+            <img src="images/meloddy.jpg" alt="Image 4" />
+          </div>
+          <div class="music-image" data-id="5">
+            <img src="images/pepe-cover.jpg" alt="Image 5" />
+          </div>
+        </div>
+        <div class="lightbox">
+          <div class="lightbox-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="lightbox-img" />
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
