@@ -69,7 +69,6 @@ document.querySelector(".profile-img").addEventListener("mouseleave", () => {
   gsap.to(".profile-img", { scale: 1, rotate: 0, duration: 0.3 });
 });
 
-
 gsap.from(".song-title", {
   duration: 1.5,
   scale: 0.8,
@@ -92,4 +91,30 @@ gsap.from(".icons div", {
   stagger: 0.2,
   delay: 1.5,
   ease: "back.out(1.7)",
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tl = gsap.timeline();
+  tl.from(".about-text h1", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power3.out",
+  })
+    .from(
+      ".about-text p",
+      {
+        duration: 1,
+        x: -50,
+        opacity: 0,
+        ease: "power3.out",
+      },
+      "-=0.5"
+    )
+    .from(".visual-frame", {
+      duration: 1.5,
+      scale: 0.8,
+      opacity: 0,
+      ease: "elastic.out(1, 0.6)",
+    });
 });

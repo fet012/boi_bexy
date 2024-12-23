@@ -9,13 +9,13 @@
     background-image: url(/boi_bexy/images/logo.jpg);
   }
   60% {
-    background-image: url(/images/gbe-misoke.jpg);
+    background-image: url(/boi_bexy/images/gbe-misoke.jpg);
   }
   80% {
-    background-image: url(/images/meloddy.jpg);
+    background-image: url(/boi_bexy/images/meloddy.jpg);
   }
   100% {
-    background-image: url(/images/pepe-cover.jpg);
+    background-image: url(/boi_bexy/images/pepe-cover.jpg);
   }
 }
 
