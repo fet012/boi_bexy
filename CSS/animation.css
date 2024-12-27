@@ -115,3 +115,18 @@
     opacity: 0.9;
   }
 }
+
+@keyframes descriptionHover {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(65, 65, 245);
+  }
+  100% {
+    color: blue;
+  }
+}
+.music-section-description a {
+  color: white;
+}
