@@ -1,6 +1,4 @@
-alert("Ifeoma coming out soon");
-
-// NAVBAR DROP
+//  NAVBAR DROP
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
   window.addEventListener("scroll", () => {
