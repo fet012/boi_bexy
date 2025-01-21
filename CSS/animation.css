@@ -1,21 +1,21 @@
 @keyframes background-switch {
   0% {
-    background-image: url(/boi_bexy/images/ifeoma.jpg);
+    background-image: url(/images/ifeoma.jpg);
   }
   20% {
-    background-image: url(/boi_bexy/images/kachi.jpg);
+    background-image: url(/images/kachi.jpg);
   }
   40% {
-    background-image: url(/boi_bexy/images/logo.jpg);
+    background-image: url(/images/logo.jpg);
   }
   60% {
-    background-image: url(/boi_bexy/images/gbe-misoke.jpg);
+    background-image: url(/images/gbe-misoke.jpg);
   }
   80% {
-    background-image: url(/boi_bexy/images/meloddy.jpg);
+    background-image: url(/images/meloddy.jpg);
   }
   100% {
-    background-image: url(/boi_bexy/images/pepe-cover.jpg);
+    background-image: url(/images/pepe-cover.jpg);
   }
 }
 
